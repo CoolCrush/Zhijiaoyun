@@ -1,7 +1,9 @@
-package com.coolcr.zhijiaoyun;
+package com.coolcr.zhijiaoyun.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.coolcr.zhijiaoyun.R;
 
 public class MainActivity extends AppCompatActivity {
 
