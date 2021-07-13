@@ -1,5 +1,6 @@
 package com.coolcr.zhijiaoyun.ui.fragment;
 
+import com.coolcr.zhijiaoyun.R;
 import com.coolcr.zhijiaoyun.base.BaseFragment;
 
 /**
@@ -10,6 +11,6 @@ import com.coolcr.zhijiaoyun.base.BaseFragment;
 public class HomeFragment extends BaseFragment {
     @Override
     protected int getRootViewResId() {
-        return 0;
+        return R.layout.fragment_home;
     }
 }
