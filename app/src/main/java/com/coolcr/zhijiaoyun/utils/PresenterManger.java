@@ -1,5 +1,6 @@
 package com.coolcr.zhijiaoyun.utils;
 
+import com.coolcr.zhijiaoyun.presenter.impl.HomePresenter;
 import com.coolcr.zhijiaoyun.presenter.impl.LoginPresenterImpl;
 
 /**
@@ -10,9 +11,11 @@ import com.coolcr.zhijiaoyun.presenter.impl.LoginPresenterImpl;
 public class PresenterManger {
     private final static PresenterManger ourInstance = new PresenterManger();
     private final LoginPresenterImpl mLoginPresenter;
+    private final HomePresenter mHomePresenter;
 
     private PresenterManger() {
         mLoginPresenter = new LoginPresenterImpl();
+        mHomePresenter = new HomePresenter();
     }
 
     public static PresenterManger getOurInstance() {
@@ -21,5 +24,9 @@ public class PresenterManger {
 
     public LoginPresenterImpl getLoginPresenter() {
         return mLoginPresenter;
+    }
+
+    public HomePresenter getHomePresenter() {
+        return mHomePresenter;
     }
 }

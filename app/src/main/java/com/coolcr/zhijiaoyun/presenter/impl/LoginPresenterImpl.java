@@ -33,7 +33,7 @@ public class LoginPresenterImpl implements ILoginPresenter {
 
     public LoginPresenterImpl() {
         mJsonCacheUtil = JsonCacheUtil.getInstance();
-        Retrofit retrofit = RetrofitManager.getInstance().getRetrofit();
+        Retrofit retrofit = RetrofitManager.getInstance().getPhoneRetrofit();
         mApi = retrofit.create(Api.class);
     }
 
