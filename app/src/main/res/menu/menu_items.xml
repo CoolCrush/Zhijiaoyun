@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menuHome"
+        android:icon="@mipmap/icon_home"
+        android:title="MOOC" />
+    <item
+        android:id="@+id/menuAbout"
+        android:icon="@mipmap/icon_my"
+        android:title="关于" />
+</menu>

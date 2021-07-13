@@ -1,5 +1,6 @@
 package com.coolcr.zhijiaoyun.ui.activity;
 
+import android.content.Intent;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -9,10 +10,12 @@ import android.widget.ImageView;
 
 import com.coolcr.zhijiaoyun.R;
 import com.coolcr.zhijiaoyun.base.BaseActivity;
+import com.coolcr.zhijiaoyun.base.BaseApplication;
 import com.coolcr.zhijiaoyun.model.domain.SignInEntity;
 import com.coolcr.zhijiaoyun.model.domain.UserLoginBean;
 import com.coolcr.zhijiaoyun.presenter.ILoginPresenter;
 import com.coolcr.zhijiaoyun.presenter.impl.LoginPresenterImpl;
+import com.coolcr.zhijiaoyun.ui.MainActivity;
 import com.coolcr.zhijiaoyun.ui.adapter.LoginHistoryAdapter;
 import com.coolcr.zhijiaoyun.ui.popupwindow.LoginHistoryPopupWindow;
 import com.coolcr.zhijiaoyun.utils.PresenterManger;
@@ -110,6 +113,9 @@ public class LoginActivity extends BaseActivity implements ILoginCallback {
     @Override
     public void onSingInResult(SignInEntity signInEntity) {
         ToastUtils.showToast(getString(R.string.login_success));
+        BaseApplication.setSignInEntity(signInEntity);
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 
     /**
